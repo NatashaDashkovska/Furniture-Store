@@ -9,6 +9,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lato:wght@400&family=Plus+Jakarta+Sans:wght@500;700;800&family=Roboto:wght@700&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+        integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -17,14 +20,14 @@
         <div class="header-banner">
             <p class="banner-text">Free Shipping on Performance Seating</p>
         </div>
-        <nav>
-            <ul class="nav-list">
+        <nav class="container nav">
+            <ul class="nav-list nav-list-first">
                 <li class="nav-link">SHOP</li>
                 <li class="nav-link">COLLECTIONS</li>
                 <li class="nav-link">ABOUT</li>
             </ul>
-            <a href="" class="logo">Elm&Oak</a>
-            <ul class="nav-list">
+            <a href="./index.html" class="logo">Elm&Oak</a>
+            <ul class="nav-list nav-list-second">
                 <li class="nav-link">CONTACT</li>
                 <li class="nav-link">FIND YOUR FAVORITES</li>
             </ul>
@@ -32,124 +35,149 @@
     </header>
 
     <main>
-        <section class="banner">
-            <h1 class="banner-header">Minimal
-                Chairs I</h1>
-            <button type="button" class="button">SHOP NOW</button>
+
+        <section class="hero">
+            <div class="blur">
+                <h1 class="hero-header">Minimal
+                    Chairs I</h1>
+                <button type="button" class="button">SHOP NOW</button>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="container categories-container">
+                <h2 class="section-title">Our Popular Categories</h2>
+                <ul class="category-list">
+                    <li class="category-card">
+                        <img src="/images/category_1.jpg" alt="white chair">
+                        <h3 class="small-title">Armchairs</h3>
+                    </li>
+                    <li class="category-card">
+                        <img src="./images/category_2.jpg" alt="wooden coffee table">
+                        <h3 class="small-title">Tables</h3>
+                    </li>
+                    <li class="category-card">
+                        <img src="./images/category_3.jpg" alt="orange chair">
+                        <h3 class="small-title">Sofas</h3>
+                    </li>
+                    <li class="category-card">
+                        <img src="./images/category_4.jpg" alt="black lamp">
+                        <h3 class="small-title">Lamps</h3>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section>
-            <h2 class="section-title">Our Popular Categories</h2>
-            <ul class="category-list">
-                <li>
-                    <img src="/images/category_1.jpg" alt="white chair" width="320">
-                    <h3 class="small-title">Armchairs</h3>
-                </li>
-                <li>
-                    <img src="./images/category_2.jpg" alt="wooden coffee table" width="320">
-                    <h3 class="small-title">Tables</h3>
-                </li>
-                <li>
-                    <img src="./images/category_3.jpg" alt="orange chair" width="320">
-                    <h3 class="small-title">Sofas</h3>
-                </li>
-                <li>
-                    <img src="./images/category_4.jpg" alt="black lamp" width="320">
-                    <h3 class="small-title">Lamps</h3>
-                </li>
-            </ul>
+            <div class="container quote-container">
+                <h2 class="visually-hidden">Quote</h2>
+                <p class="quote">At Émeric Fontaine, we aspire for you to achieve greatness. That's why we create
+                    ingenious
+                    designs that
+                    seamlessly blend
+                    aesthetics and functionality.</p>
+            </div>
         </section>
 
         <section>
-            <h2>Quote</h2>
-            <p class="quote">At Émeric Fontaine, we aspire for you to achieve greatness. That's why we create ingenious
-                designs that
-                seamlessly blend
-                aesthetics and functionality.</p>
+            <div class="container release-container">
+                <div class="release-text-block">
+                    <h2 class="release-title">NEW RELEASE</h2>
+                    <h3 class="section-title main-title-aside">Zenith Rise Stool</h3>
+                    <p class="section-text">Introducing the Zenith Rise Stool, a masterpiece of fluid contours and
+                        elevated
+                        comfort. Crafted with
+                        precision by
+                        Velluxe Designs, this innovative seating solution offers unparalleled ergonomic performance and
+                        captivating aesthetics.</p>
+                    <button type="button" class="button">SHOP NOW</button>
+                </div>
+                <img src="./images/release.jpg" alt="white chair and basket">
+            </div>
         </section>
 
-        <section>
-            <h2 class="small-title">NEW RELEASE</h2>
-            <h3 class="section-title">Zenith Rise Stool</h3>
-            <p class="section-text">Introducing the Zenith Rise Stool, a masterpiece of fluid contours and elevated
-                comfort. Crafted with
-                precision by
-                Velluxe Designs, this innovative seating solution offers unparalleled ergonomic performance and
-                captivating aesthetics.</p>
-            <button type="button" class="button">SHOP NOW</button>
-            <img src="./images/release.jpg" alt="white chair and basket" width="660">
-        </section>
-
-        <section>
+        <section class="container spaces-container">
             <h2 class="section-title">Inspired Spaces</h2>
-            <p>DISCOVER</p>
+            <p class="accent-title">DISCOVER</p>
             <img src="./images/spaces.jpg" alt="dining room">
         </section>
 
         <section>
-            <h2 class="place-title">THE PLACE</h2>
-            <h3 class="section-title">Visit Us</h3>
-            <p class="section-text">Experience the artistry of our furniture store, where style and comfort intertwine.
-                Discover a wide
-                selection of
-                stunning pieces that cater to every taste. Let our knowledgeable staff guide you in creating your
-                perfect space.
-                Visit
-                us today and bring your vision to life.</p>
-            <button type="button" class="button">LEARN MORE</button>
-            <img src="./images/place.jpg" alt="interior with stairs" width="660">
+            <div class="container place-container">
+                <img src="./images/place.jpg" alt="interior with stairs">
+                <div class="place-thumb">
+                    <h2 class="place-title">THE PLACE</h2>
+                    <h3 class="section-title main-title-aside">Visit Us</h3>
+                    <p class="section-text">Experience the artistry of our furniture store, where style and comfort
+                        intertwine.
+                        Discover a wide
+                        selection of
+                        stunning pieces that cater to every taste. Let our knowledgeable staff guide you in creating
+                        your
+                        perfect space.
+                        Visit
+                        us today and bring your vision to life.</p>
+                    <button type="button" class="button">LEARN MORE</button>
+                </div>
+
+            </div>
         </section>
 
-        <section>
+        <section class="bessel-container">
             <h2 class="section-title">Our Best-Sellers</h2>
             <ul class="bestsellers-list">
-                <li>
-                    <img src="/images/b-seller-1.jpg" alt="shelf with dishes" width="353">
+                <li class="bessel-item">
+                    <img src="/images/b-seller-1.jpg" alt="shelf with dishes">
                     <h3 class="bestseller-title">Culina Shelf</h3>
                     <p class="bestseller-price">$24.99</p>
                 </li>
-                <li>
-                    <img src="./images/b-seller-2.jpg" alt="table with vase and flowers" width="353">
+                <li class="bessel-item">
+                    <img src="./images/b-seller-2.jpg" alt="table with vase and flowers">
                     <h3 class="bestseller-title">Papercraft Blossom</h3>
                     <p class="bestseller-price">$17</p>
                 </li>
-                <li>
-                    <img src="./images/b-seller-3.jpg" alt="chair and plants" width="353">
+                <li class="bessel-item">
+                    <img src="./images/b-seller-3.jpg" alt="chair and plants">
                     <h3 class="bestseller-title">Luciena Straw Armchair</h3>
                     <p class="bestseller-price">$54</p>
                 </li>
-                <li>
-                    <img src="./images/b-seller-4.jpg" alt="black chair" width="353">
+                <li class="bessel-item">
+                    <img src="./images/b-seller-4.jpg" alt="black chair">
                     <h3 class="bestseller-title">SleekForm Chair</h3>
                     <p class="bestseller-price">$28</p>
                 </li>
             </ul>
         </section>
 
-        <section>
-            <h2 class="section-title">Tailored Configurations for Every Objective</h2>
-            <p class="blog-section-desc">Crafted with Individuals in Mind. Crafted for Your Needs. Discover our Range of Offerings for
-                Productivity, Recovery,
-                and Education.</p>
+        <section class=" container">
+            <div class="title-block">
+                <h2 class="section-title blog-title">Tailored Configurations for Every Objective</h2>
+                <p class="blog-section-desc">Crafted with Individuals in Mind. Crafted for Your Needs. Discover our
+                    Range of
+                    Offerings for
+                    Productivity, Recovery,
+                    and Education.</p>
+            </div>
             <ul class="blogs-list">
-                <li>
-                    <img src="./images/blog_1.jpg" alt="dining table with chairs" width="320">
+                <li class="blog-item">
+                    <img src="./images/blog_1.jpg" alt="dining table with chairs">
                     <h3 class="blog-header">The Art of Small Space Living</h3>
                     <p class="blog-text">Discover creative furniture solutions and smart design tips to make the most of
                         your compact
                         living
                         space...</p>
                 </li>
-                <li>
-                    <img src="./images/blog_2.jpg" alt="woman in a chair" width="320">
+                <li class="blog-item">
+                    <img src="./images/blog_2.jpg" alt="woman in a chair">
                     <h3 class="blog-header">Unwind in Style: Introducing Our Luxurious Recliner Collection</h3>
                     <p class="blog-text">Experience ultimate comfort and relaxation with our new range of stylish
                         recliners designed to
                         elevate your lounging
                         experie...</p>
                 </li>
-                <li>
-                    <img src="./images/blog_3.jpg" alt="dining room" width="320">
+                <li class="blog-item">
+                    <img src="./images/blog_3.jpg" alt="dining room">
                     <h3 class="blog-header">Embrace Scandinavian Charm: Explore the Nordic Furniture Trend</h3>
                     <p class="blog-text">Delve into the world of minimalist elegance and natural beauty as we showcase
                         the timeless allure
@@ -157,8 +185,8 @@
                         Scandinavian
                         furniture.</p>
                 </li>
-                <li>
-                    <img src="./images/blog_4.jpg" alt="dining area" width="320">
+                <li class="blog-item">
+                    <img src="./images/blog_4.jpg" alt="dining area">
                     <h3 class="blog-header">Revamp Your Dining Area: Inspiration for Modern Table Settings</h3>
                     <p class="blog-text">Get inspired with our curated collection of contemporary dining table setups,
                         bringing a touch of
@@ -168,28 +196,36 @@
             </ul>
         </section>
 
-        <section>
+        <section class="container designers-container">
             <h2 class="section-title">Meet Our Designers</h2>
             <ul class="designers-list">
                 <li class="designer-block">
-                    <img src="./images/profile-1.jpg" alt="photo of designer" width="316">
-                    <p class="designers-text">DESIGNED BY</p>
-                    <h3 class="section-title">Laura Smith</h3>
+                    <img src="./images/profile-1.jpg" alt="photo of designer">
+                    <div class="designer-desc">
+                        <p class="designers-text">DESIGNED BY</p>
+                        <h3 class="designers-name">Laura Smith</h3>
+                    </div>
                 </li>
                 <li class="designer-block">
-                    <img src="./images/profile-2.jpg" alt="photo of designer" width="316">
-                    <p class="designers-text">DESIGNED BY</p>
-                    <h3 class="section-title">Richard White</h3>
+                    <img src="./images/profile-2.jpg" alt="photo of designer">
+                    <div class="designer-desc">
+                        <p class="designers-text">DESIGNED BY</p>
+                        <h3 class="designers-name">Richard White</h3>
+                    </div>
                 </li>
                 <li class="designer-block">
-                    <img src="./images/profile-3.jpg" alt="photo of designer" width="316">
-                    <p class="designers-text">DESIGNED BY</p>
-                    <h3 class="section-title">Megan Hill</h3>
+                    <img src="./images/profile-3.jpg" alt="photo of designer">
+                    <div class="designer-desc">
+                        <p class="designers-text">DESIGNED BY</p>
+                        <h3 class="designers-name">Megan Hill</h3>
+                    </div>
                 </li>
                 <li class="designer-block">
-                    <img src="./images/profile-4.jpg" alt="photo of designer" width="316">
-                    <p class="designers-text">DESIGNED BY</p>
-                    <h3 class="section-title">Chris Wood</h3>
+                    <img src="./images/profile-4.jpg" alt="photo of designer">
+                    <div class="designer-desc">
+                        <p class="designers-text">DESIGNED BY</p>
+                        <h3 class="designers-name">Chris Wood</h3>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -197,31 +233,39 @@
     </main>
 
     <footer class="footer">
-        <ul class="footer-links-list">
-            <li class="footer-link">Company</li>
-            <li class="footer-link">About</li>
-            <li class="footer-link">Our offerings</li>
-            <li class="footer-link">Information</li>
-            <li class="footer-link">Tips & Guides</li>
-            <li class="footer-link">Pricing plans</li>
-            <li class="footer-link">Help</li>
-            <li class="footer-link">Support</li>
-            <li class="footer-link">FAQ</li>
-        </ul>
-        <ul class="social-icons-list">
-            <li>Instagram</li>
-            <li>Facebook</li>
-            <li>Pinterest</li>
-            <li>YouTube</li>
-            <li>Twitter</li>
-        </ul>
-       
-        <ul class="copyright-list">
-            <li class="copyright-item">Maker</li>
-            <li class="copyright-item">Copytight 2021 © Company name. All right reserved</li>
-            <li class="copyright-item">Privacy Policy</li>
-            <li class="copyright-item">Terms and Conditions</li>
-        </ul>
+        <div class="container footer-container">
+            <ul class="footer-links-list">
+                <div class="links-block">
+                    <li class="footer-link">Company</li>
+                    <li class="footer-link">About</li>
+                    <li class="footer-link">Our offerings</li>
+                </div>
+                <div class="links-block">
+                    <li class="footer-link">Information</li>
+                    <li class="footer-link">Tips & Guides</li>
+                    <li class="footer-link">Pricing plans</li>
+                </div>
+                <div class="links-block">
+                    <li class="footer-link">Help</li>
+                    <li class="footer-link">Support</li>
+                    <li class="footer-link">FAQ</li>
+                </div>
+            </ul>
+            <ul class="social-icons-list">
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>Pinterest</li>
+                <li>YouTube</li>
+                <li>Twitter</li>
+            </ul>
+
+            <ul class="copyright-list">
+                <li class="copyright-item">Maker</li>
+                <li class="copyright-item">Copytight 2021 © Company name. All right reserved</li>
+                <li class="copyright-item">Privacy Policy</li>
+                <li class="copyright-item">Terms and Conditions</li>
+            </ul>
+        </div>
     </footer>
 </body>
 
