@@ -4,10 +4,10 @@
   --secondary-bg-color: #e4e6e5;
   --accent-color: #8a4a15;
 }
-/* 
+
 * {
   outline: 1px solid tomato;
-} */
+}
 
 body {
   font-family: 'Inter', sans-serif;
@@ -125,7 +125,11 @@ img {
 /* hero  */
 
 .hero {
-  height: 606px;
+  background-color: var(--secondary-bg-color);
+  background-image: url(../images/hero.jpg);
+  max-width: 1366px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .hero-header {
@@ -141,6 +145,7 @@ img {
   height: 100%;
   padding: 224px 70px;
   width: 290px;
+  filter: blur(8px);
 }
 
 .button {
@@ -447,6 +452,15 @@ img {
 .social-icons-list {
   display: flex;
   justify-content: end;
+}
+
+.social-icon svg {
+  max-height: 19px;
+  max-width: 20px;
+}
+
+.social-icon:not(:last-child) {
+  margin-right: 30px;
 }
 
 .copyright-list {
