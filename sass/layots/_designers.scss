@@ -1,0 +1,42 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+
+.designers__container {
+  padding-top: 70px;
+}
+
+.designers__text {
+  @include mixins.font-settings(14px, 400, 1.4, 0.4px);
+}
+
+.designers__list {
+  margin-top: 40px;
+  flex-wrap: wrap;
+  @include mixins.grid-layout(4, 8px);
+}
+
+.designers__block {
+  padding: 24px 0px 24px 24px;
+  min-width: 655px;
+  box-sizing: border-box;
+
+  display: flex;
+
+  background-color: variables.$secondary-bg-color;
+}
+
+.designers__block:not(:nth-last-child(-n + 2)) {
+  margin-bottom: 16px;
+}
+
+.designers__description {
+  padding: 208px 0px 39px 0px;
+  margin-left: 28px;
+}
+
+.designers__name {
+  margin-top: 4px;
+
+  font-family: 'Source Serif 4';
+  @include mixins.font-settings(40px, 400, 1.2, 0px);
+}

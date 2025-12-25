@@ -1,0 +1,15 @@
+@use '../utils/mixins';
+
+.release__container {
+  display: flex;
+}
+
+.release__text-block {
+  padding: 61px 100px 61px 73px;
+}
+
+.release__title {
+  font-family: 'Plus Jakarta Sans';
+  @include mixins.font-settings(12px, 400, 1.4, 0.4px);
+
+}

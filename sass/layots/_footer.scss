@@ -1,0 +1,69 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+
+.footer {
+  background-color: variables.$main-text-color;
+  color: variables.$main-bg-color;
+}
+
+.footer__container {
+  padding: 46px 20px 6px;
+}
+
+.footer__link {
+  @include mixins.font-settings(14px, 400, 1.4, 0.4px);
+  cursor: pointer;
+}
+
+.footer__links-block {
+  margin-right: 107px;
+}
+
+.footer__links-block .footer__link:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.footer__links-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+}
+
+.footer__icons-list {
+  display: flex;
+  justify-content: end;
+}
+
+.footer__icon svg {
+  max-height: 19px;
+  max-width: 20px;
+}
+
+.footer__icon:not(:last-child) {
+  margin-right: 30px;
+}
+
+.footer__copyright-list {
+  display: flex;
+}
+
+.footer--line {
+  margin-top: 41px;
+  margin-bottom: 32px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: variables.$main-bg-color;
+}
+
+.footer__copyright {
+  @include mixins.font-settings(14px, 400, 1.4, 0.4px);
+}
+
+.footer__copyright:nth-child(odd) {
+  margin-right: 50px;
+}
+
+.footer__copyright:nth-child(2) {
+  margin-right: auto;
+}

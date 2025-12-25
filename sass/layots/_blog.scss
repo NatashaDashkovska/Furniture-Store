@@ -1,0 +1,33 @@
+@use '../utils/mixins';
+
+.blog__title {
+  padding: 0px 100px;
+}
+
+.blog__title-block {
+  padding: 0px 320px 40px;
+}
+
+.blog__section-desc {
+  margin-top: 24px;
+
+  font-family: 'Source Serif 4';
+  @include mixins.font-settings(20px, 400, 1.4, 0.83px);
+  text-align: center;
+}
+
+.blog__list {
+  @include mixins.grid-layout(4, 8px);
+}
+
+.blog__header {
+  margin-top: 10px;
+  @include mixins.font-settings(18px, 400, 1.4, 0px);
+}
+
+.blog__text {
+  margin-top: 4px;
+
+  @include mixins.font-settings(14px, 400, 1.4, 0.4px);
+  color: #2e2e2d;
+}

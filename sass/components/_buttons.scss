@@ -1,0 +1,21 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+
+.button {
+  padding: 10px 31px 10px;
+
+  font-family: 'Plus Jakarta Sans';
+  @include mixins.font-settings(14px, 400, 1.28, 0.83px);
+  color: variables.$main-bg-color;
+  background-color: variables.$main-text-color;
+
+  border: 1px solid variables.$main-text-color;
+  @include mixins.transition(color, background-color);
+}
+
+.button:hover,
+.button:focus {
+  background-color: variables.$main-bg-color;
+  color: variables.$main-text-color;
+  @include mixins.transition(color, background-color);
+}

@@ -1,0 +1,24 @@
+@use './utils/normalize';
+@use './utils/variables';
+@use './utils/mixins';
+
+@use './base/common';
+@use './base/container';
+
+@use './layots/header';
+@use './layots/hero';
+@use './components/buttons';
+@use './layots/categories';
+@use './layots/quote';
+@use './layots/releases';
+@use './layots/spaces';
+@use './layots/places';
+@use './layots/bestsellers';
+@use './layots/blog';
+@use './layots/designers';
+
+@use './layots/footer';
+
+// * {
+//   outline: 1px solid tomato;
+// }

@@ -1,0 +1,11 @@
+@use '../utils/mixins';
+
+.quote {
+  display: inline-block;
+  font-family: 'Source Serif 4';
+  @include mixins.font-settings(40px, 400, 1.5, 0px);
+  font-style: italic;
+  text-align: center;
+  padding: 70px 170px 70px 192px;
+}
+

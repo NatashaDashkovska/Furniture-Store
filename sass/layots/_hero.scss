@@ -1,0 +1,25 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+
+.hero {
+  margin-right: auto;
+  margin-left: auto;
+
+  max-width: 1366px;
+  background-color: variables.$secondary-bg-color;
+  background-image: url(../images/hero.jpg);
+}
+
+.hero__header {
+  margin-bottom: 24px;
+
+  font-family: 'Source Serif 4';
+  @include mixins.font-settings(40px, 400, 1.2, 0px);
+}
+
+.hero__blur {
+  padding: 224px 70px;
+  height: 100%;
+  width: 290px;
+  backdrop-filter: blur(8px);
+}

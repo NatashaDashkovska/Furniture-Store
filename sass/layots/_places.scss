@@ -1,0 +1,14 @@
+@use '../utils/mixins';
+
+.places__container {
+  display: flex;
+  padding: 70px 73px;
+}
+
+.places__thumb {
+  padding: 49px 73px 49px 100px;
+}
+
+.places__title {
+  @include mixins.font-settings(14px, 400, 1.4, 0.4px);
+}
