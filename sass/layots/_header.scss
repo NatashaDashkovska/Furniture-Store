@@ -11,16 +11,23 @@
 }
 
 .header__banner-text {
+  @include mixins.font-settings(10px, 400, 0.9, 0.83px);
   margin-right: auto;
   margin-left: auto;
   padding: 0;
 
-  display: inline-block; 
-  width: auto; 
-  
+  display: inline-block;
+  width: auto;
+
   text-align: center;
   font-family: 'Plus Jakarta Sans';
-  @include mixins.font-settings(16px, 400, 1, 0.83px);
+
+  @include mixins.for-size(tablet) {
+    @include mixins.font-settings(12px, 400, 0.9, 0.83px);
+  }
+  @include mixins.for-size(desktop) {
+    @include mixins.font-settings(16px, 400, 1, 0.83px);
+  }
 }
 
 .header__banner-text::after {
@@ -33,21 +40,38 @@
 }
 
 .header__navigation {
-  padding: 24px 38px 24px;
-  display: flex;
+  @include mixins.for-size(desktop) {
+    padding: 24px 38px 24px;
+    display: flex;
+  }
 }
 
 .header__list {
-  display: flex;
-  align-items: center;
+  @include mixins.for-size(desktop) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__list--first {
-  margin-right: 320px;
+  margin-left: 30px;
+  @include mixins.for-size(desktop) {
+    margin-right: 320px;
+    margin-left: 0;
+  }
 }
 
 .header__list--second {
-  margin-left: auto;
+  margin-top: 8px;
+  margin-left: 30px;
+
+  @include mixins.for-size(tablet) {
+    margin-top: 15px;
+  }
+  @include mixins.for-size(desktop) {
+    margin-left: auto;
+    margin-top: 0;
+  }
 }
 
 .header__link {
@@ -58,7 +82,15 @@
 }
 
 .header__link:not(:last-child) {
-  margin-right: 40px;
+  margin-bottom: 8px;
+
+  @include mixins.for-size(tablet) {
+    margin-bottom: 15px;
+  }
+  @include mixins.for-size(desktop) {
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
 }
 
 .header__link:hover,
@@ -68,8 +100,79 @@
 }
 
 .header__logo {
-  text-decoration: none;
+  display: none;
+
+  @include mixins.for-size(desktop) {
+    display: block;
+    font-family: 'Lato';
+    @include mixins.font-settings(32px, 400, normal, 0em);
+    color: variables.$main-text-color;
+  }
+}
+
+.header__burger-logo {
   font-family: 'Lato';
-  @include mixins.font-settings(32px, 400, normal, 0em);
+  @include mixins.font-settings(23px, 400, normal, 0em);
   color: variables.$main-text-color;
+  margin-left: 67px;
+  @include mixins.for-size(tablet) {
+    margin-left: 163px;
+  }
+
+  @include mixins.for-size(desktop) {
+    display: none;
+  }
+}
+
+.header__burger-btn {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  background-color: transparent;
+  @include mixins.for-size(desktop) {
+    display: none;
+  }
+}
+
+.js-open-menu {
+  margin-left: auto;
+}
+
+.header__burger-btn svg {
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.js-close-menu {
+  position: absolute;
+  z-index: 999;
+  top: 40px;
+  left: 15px;
+}
+
+.is-open {
+  display: none;
+  @include mixins.for-size(desktop) {
+    display: block;
+  }
+}
+
+.header:has(.js-open-menu[aria-expanded='true']) .js-menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  padding: 48px 40px;
+
+  background-color: #f1c3a6;
+}
+
+.js-menu-container {
+  @include mixins.for-size(desktop) {
+    display: flex;
+    flex-grow: 1;
+  }
 }

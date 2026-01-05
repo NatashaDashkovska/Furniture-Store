@@ -67,3 +67,11 @@ img {
   font-family: 'Source Serif 4';
   @include mixins.font-settings(15px, 400, 1.6, 0.83px);
 }
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}

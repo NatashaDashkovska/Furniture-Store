@@ -31,7 +31,7 @@
 @mixin transition($properties...) {
   $transition-list: ();
   @each $prop in $properties {
-       $transition-list: list.append(
+    $transition-list: list.append(
       $transition-list,
       ($prop variables.$time-function),
       $separator: comma
@@ -40,4 +40,26 @@
   transition: $transition-list;
 }
 
+@mixin for-size($range) {
+  $phone: 320px;
+  $tablet: 600px;
+  $desktop: 1366px;
 
+  @if $range == phone-only {
+    @media (max-width: #{$phone - 1}) {
+      @content;
+    }
+  } @else if $range == phone {
+    @media (min-width: $phone) {
+      @content;
+    }
+  } @else if $range == tablet {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  } @else if $range == desktop {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }
+}

@@ -13,11 +13,27 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="header__banner">
             <p class="header__banner-text">Free Shipping on Performance Seating</p>
         </div>
-        <nav class="container header__navigation">
+
+        <div class="container">
+            <button class="header__burger-btn js-open-menu">
+                <svg>
+                    <use href="./images/sprite.svg#icon-burger-open"></use>
+                </svg>
+            </button>
+            <a href="./index.html" class="header__burger-logo">Elm&Oak</a>
+        </div>
+
+        <nav class="container header__navigation js-menu-container is-open">
+
+            <button class="header__burger-btn js-close-menu">
+                <svg>
+                    <use href="./images/sprite.svg#icon-burger-close"></use>
+                </svg>
+            </button>
             <ul class="header__list header__list--first">
                 <li class="header__link">SHOP</li>
                 <li class="header__link">COLLECTIONS</li>
@@ -278,6 +294,8 @@
             </ul>
         </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
