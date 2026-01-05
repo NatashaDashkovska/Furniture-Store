@@ -4,22 +4,73 @@
 .hero {
   margin-right: auto;
   margin-left: auto;
+  width: 320px;
 
-  max-width: 1366px;
   background-color: variables.$secondary-bg-color;
-  background-image: url(../images/hero.jpg);
+  background-image: url(../images/hero-320.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 320px 216px;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/hero-320@2x.jpg');
+  }
+
+  @include mixins.for-size(tablet) {
+    background-image: url(../images/hero-600.jpg);
+    background-size: 600px 380px;
+    width: 600px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero-600@2x.jpg');
+    }
+  }
+
+  @include mixins.for-size(desktop) {
+    background-image: url(../images/hero-1366.jpg);
+    background-size: 1366px 606px;
+    width: 1366px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero-1366@2x.jpg');
+    }
+  }
 }
 
 .hero__header {
-  margin-bottom: 24px;
-
+  margin-bottom: 8px;
   font-family: 'Source Serif 4';
-  @include mixins.font-settings(40px, 400, 1.2, 0px);
+  @include mixins.font-settings(24px, 400, 1.3, 0px);
+  @include mixins.for-size(tablet) {
+    margin-bottom: 16px;
+    @include mixins.font-settings(28px, 400, 1.3, 0px);
+  }
+
+  @include mixins.for-size(desktop) {
+    margin-bottom: 24px;
+
+    @include mixins.font-settings(40px, 400, 1.2, 0px);
+  }
 }
 
 .hero__blur {
-  padding: 224px 70px;
+  padding: 56px 30px 56px 24px;
+  width: 50%;
   height: 100%;
-  width: 290px;
   backdrop-filter: blur(8px);
+  @include mixins.for-size(tablet) {
+    padding: 128px 35px;
+    width: 205px;
+  }
+
+  @include mixins.for-size(desktop) {
+    padding: 224px 70px;
+    width: 290px;
+  }
 }

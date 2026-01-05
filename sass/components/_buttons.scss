@@ -2,15 +2,24 @@
 @use '../utils/mixins';
 
 .button {
-  padding: 10px 31px 10px;
-
+  padding: 7px 14px;
   font-family: 'Plus Jakarta Sans';
-  @include mixins.font-settings(14px, 400, 1.28, 0.83px);
+  @include mixins.font-settings(12px, 400, 1.5, 0.83px);
   color: variables.$main-bg-color;
   background-color: variables.$main-text-color;
 
   border: 1px solid variables.$main-text-color;
   @include mixins.transition(color, background-color);
+
+  @include mixins.for-size(tablet) {
+    padding: 9px 23px;
+    @include mixins.font-settings(14px, 400, 1.28, 0.83px);
+  }
+
+  @include mixins.for-size(desktop) {
+    padding: 10px 31px 10px;
+    @include mixins.font-settings(14px, 400, 1.28, 0.83px);
+  }
 }
 
 .button:hover,
