@@ -4,14 +4,16 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
 
   @include mixins.for-size(phone) {
     width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   @include mixins.for-size(tablet) {
     width: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   @include mixins.for-size(desktop) {
     width: 1366px;

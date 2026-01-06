@@ -18,13 +18,12 @@
 
 @mixin grid-layout($items-per-row, $gap) {
   display: flex;
-  margin-right: -($gap);
-  margin-left: -($gap);
+  flex-wrap: wrap;
+  margin: -(math.div($gap, 2));
 
   & > * {
     flex-basis: calc(100% / #{$items-per-row} - #{$gap});
-    margin-right: $gap;
-    margin-left: $gap;
+    margin: math.div($gap, 2);
   }
 }
 
