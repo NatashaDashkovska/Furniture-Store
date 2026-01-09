@@ -69,15 +69,30 @@ img {
 
 .main-title-aside {
   text-align: start;
-  margin-top: 17px;
+  margin-top: 7px;
+  @include mixins.for-size(tablet) {
+    margin-top: 13px;
+  }
+  @include mixins.for-size(desktop) {
+    margin-top: 17px;
+  }
 }
 
 .section-text {
-  margin-top: 24px;
-  margin-bottom: 24px;
-
+  margin-top: 16px;
+  margin-bottom: 16px;
   font-family: 'Source Serif 4';
-  @include mixins.font-settings(15px, 400, 1.6, 0.83px);
+  @include mixins.font-settings(12px, 400, 1.4, 0.83px);
+
+  @include mixins.for-size(tablet) {
+    @include mixins.font-settings(12px, 400, 1.5, 0.83px);
+  }
+
+  @include mixins.for-size(desktop) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    @include mixins.font-settings(15px, 400, 1.6, 0.83px);
+  }
 }
 
 * {

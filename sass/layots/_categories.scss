@@ -8,22 +8,16 @@
 }
 
 .categories__list {
-  @include mixins.grid-layout(2, 12px);
   margin-top: 22px;
+  @include mixins.grid-layout(2, 12px);
 
   @include mixins.for-size(tablet) {
-    @include mixins.grid-layout(2, 16px);
     margin-top: 32px;
+    @include mixins.grid-layout(2, 16px);
   }
 
   @include mixins.for-size(desktop) {
-    @include mixins.grid-layout(4, 16px);
     margin-top: 40px;
+    @include mixins.grid-layout(4, 16px);
   }
 }
-
-// .categories__card {
-//   flex-basis: calc(100% / 4 - 8px);
-//   margin-right: 8px;
-//   margin-left: 8px;
-// }

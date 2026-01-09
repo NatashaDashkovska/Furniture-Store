@@ -2,41 +2,78 @@
 @use '../utils/mixins';
 
 .designers__container {
-  padding-top: 70px;
-}
-
-.designers__text {
-  @include mixins.font-settings(14px, 400, 1.4, 0.4px);
+  margin-top: 32px;
+  margin-bottom: 13px;
+  @include mixins.for-size(tablet) {
+    margin-top: 50px;
+    margin-bottom: 17px;
+  }
+  @include mixins.for-size(desktop) {
+    margin-top: 70px;
+    margin-bottom: 0;
+  }
 }
 
 .designers__list {
-  margin-top: 40px;
-  flex-wrap: wrap;
-  @include mixins.grid-layout(4, 8px);
+  margin-top: 32px;
+  @include mixins.for-size(desktop) {
+    flex-wrap: wrap;
+    @include mixins.grid-layout(4, 16px);
+    margin-top: 40px;
+  }
+}
+
+.designers__text {
+  @include mixins.font-settings(12px, 400, 1.3, 0.2px);
+
+  @include mixins.for-size(tablet) {
+    @include mixins.font-settings(12px, 400, 1.4, 0.4px);
+  }
+  @include mixins.for-size(desktop) {
+    @include mixins.font-settings(14px, 400, 1.4, 0.4px);
+  }
 }
 
 .designers__block {
-  padding: 24px 0px 24px 24px;
-  min-width: 655px;
-  box-sizing: border-box;
-
-  display: flex;
-
+  padding: 16px 0px 16px 16px;
   background-color: variables.$secondary-bg-color;
+  display: flex;
+  @include mixins.for-size(tablet) {
+    padding: 24px 0px 24px 24px;
+  }
+  @include mixins.for-size(desktop) {
+    min-width: 655px;
+  }
 }
 
-.designers__block:not(:nth-last-child(-n + 2)) {
+.designers__block:not(:last-child) {
   margin-bottom: 16px;
+  @include mixins.for-size(desktop) {
+    margin-bottom: 8px;
+  }
 }
 
 .designers__description {
-  padding: 208px 0px 39px 0px;
-  margin-left: 28px;
+  margin-left: 12px;
+  padding: 40px 0px 14px;
+  @include mixins.for-size(tablet) {
+    margin-left: 16px;
+    padding: 146px 0px 37px;
+  }
+  @include mixins.for-size(desktop) {
+    padding: 208px 0px 39px 0px;
+    margin-left: 28px;
+  }
 }
 
 .designers__name {
-  margin-top: 4px;
-
+  @include mixins.font-settings(22px, 400, 1.3, 0px);
   font-family: 'Source Serif 4';
-  @include mixins.font-settings(40px, 400, 1.2, 0px);
+  @include mixins.for-size(tablet) {
+    margin-top: 4px;
+    @include mixins.font-settings(28px, 400, 1.3, 0px);
+  }
+  @include mixins.for-size(desktop) {
+    @include mixins.font-settings(40px, 400, 1.2, 0px);
+  }
 }
