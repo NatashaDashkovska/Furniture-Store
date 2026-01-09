@@ -8,16 +8,16 @@
 }
 
 .categories__list {
-  margin-top: 22px;
   @include mixins.grid-layout(2, 12px);
+  margin-top: 22px;
 
   @include mixins.for-size(tablet) {
-    margin-top: 32px;
     @include mixins.grid-layout(2, 16px);
+    margin-top: 32px;
   }
 
   @include mixins.for-size(desktop) {
-    margin-top: 40px;
     @include mixins.grid-layout(4, 16px);
+    margin-top: 40px;
   }
 }
